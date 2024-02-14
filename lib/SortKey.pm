@@ -21,7 +21,7 @@ Basic use with C<sort()>:
  use SortKey::Num::length;
  my $by_length = SortKey::Num::length::gen_keygen;
 
- my @sorted = sort { $length->($a) <=> $length($b) } "food", "foo", "foolish";
+ my @sorted = sort { $by_length->($a) <=> $by_length->($b) } "food", "foo", "foolish";
  # => ('foo', 'food', 'foolish')
 
 Basic use with C<Sort::Key>:
